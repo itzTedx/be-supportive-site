@@ -1,0 +1,218 @@
+---
+alwaysApply: true
+---
+
+# Project Overview
+
+You are building a production-grade website for a UAE business services company named Be Supportive.
+
+==================================================
+## PROJECT STACK
+==================================================
+
+- Next.js 15 App Router
+- TypeScript strict mode
+- Tailwind CSS latest
+- shadcn/ui components
+- Framer Motion
+- Server Components first
+- Client Components only when necessary
+- next-sitemap
+- SEO optimized architecture
+
+==================================================
+## PRIMARY OBJECTIVE
+==================================================
+
+Build a premium, fast, SEO-dominant corporate website that converts visitors into leads.
+
+### Company services:
+
+- Business Setup UAE
+- PRO Services
+- Visa Services
+- Tax Consultancy
+- VAT Registration
+- Corporate Tax
+- Payroll Services
+- HR Services
+- CICPA Passes
+- Insurance Services
+- Notary Services
+- MOHRE Services
+- Accounting & Bookkeeping
+
+==================================================
+## DESIGN SYSTEM
+==================================================
+
+### Visual Style:
+
+- Premium corporate
+- Trustworthy
+- Clean whitespace
+- Enterprise feel
+- Modern subtle animations
+- High-end SaaS style
+
+### Color Direction:
+
+- White base
+- Dark navy text
+- Emerald accent
+- Soft gray backgrounds
+
+### UI Rules:
+
+- Rounded-2xl cards
+- Large spacing
+- Strong typography hierarchy
+- Clean icon usage
+- Mobile-first responsive
+- Elegant hover states
+
+==================================================
+## CODE RULES
+==================================================
+
+### Always use:
+
+- TypeScript types
+- Reusable components
+- Clean file structure
+- Semantic HTML
+- Accessibility best practices
+- No unnecessary client-side JS
+- Async server components when possible
+
+### Never use:
+
+- any type
+- inline messy styles
+- duplicated code
+- giant monolithic components
+- poor naming
+- random colors
+- low-quality spacing
+
+==================================================
+## FOLDER STRUCTURE
+==================================================
+
+app/
+components/
+lib/
+data/
+types/
+hooks/
+public/
+
+==================================================
+## SEO RULES
+==================================================
+
+### Every page must include:
+
+- metadata export
+- title under 60 chars
+- description under 160 chars
+- one H1 only
+- proper H2/H3 structure
+- internal links
+- CTA section
+- schema markup when useful
+
+#### Primary Keywords:
+
+- business setup uae
+- company formation abu dhabi
+- pro services uae
+- visa services uae
+- vat registration uae
+
+==================================================
+## PAGE RULES
+==================================================
+
+### Every page should feel conversion-focused.
+
+#### Include:
+
+1. Hero section
+2. Benefits
+3. Process steps
+4. Why choose us
+5. FAQs
+6. CTA form
+
+==================================================
+## COMPONENT RULES
+==================================================
+
+### Prefer reusable sections:
+
+- HeroSection
+- SectionHeading
+- ServiceGrid
+- StatsSection
+- CTASection
+- FAQSection
+- TestimonialSection
+
+==================================================
+## PERFORMANCE RULES
+==================================================
+
+### Target Lighthouse 95+
+
+#### Use:
+
+- next/image
+- optimized fonts
+- minimal JS
+- lazy load where useful
+- server rendering first
+
+==================================================
+## CONTENT TONE
+==================================================
+
+Professional
+Clear
+Confident
+Supportive
+Trust-building
+UAE market relevant
+
+==================================================
+## WHEN GENERATING CODE
+==================================================
+
+### Always provide:
+
+- complete files
+- imports included
+- typed props
+- responsive Tailwind
+- production quality output
+
+==================================================
+## WHEN ASKED TO BUILD PAGES
+==================================================
+
+Default to premium landing page quality.
+
+==================================================
+## CURRENT PRIORITY
+==================================================
+
+Build homepage first.
+Then services pages.
+Then lead generation forms.
+Then blog SEO system.
+
+==================================================
+## SPECIAL NOTE
+==================================================
+
+This website must look expensive and rank high.
