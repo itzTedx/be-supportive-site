@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Merriweather } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { DirectionProvider } from "@/components/ui/direction";
 
+import { neueMontreal, seasonMix } from "@/assets/fonts";
+
 import { cn } from "@/lib/utils";
-
-const merriweatherHeading = Merriweather({
-	subsets: ["latin"],
-	variable: "--font-heading",
-});
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -29,8 +23,8 @@ export default function RootLayout({
 		<html
 			className={cn(
 				"h-full font-sans antialiased",
-				inter.variable,
-				merriweatherHeading.variable
+				neueMontreal.className,
+				seasonMix.variable
 			)}
 			dir="ltr"
 			lang="en"

@@ -22,7 +22,7 @@ import { NAV_ITEMS } from "@/config/navigation";
 
 export function Navbar() {
 	return (
-		<header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
+		<header className="fixed top-0 z-40 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/5">
 			<div className="mx-auto flex h-18 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Link href="/">
 					<Logo />
@@ -42,7 +42,7 @@ export function Navbar() {
 					))}
 				</nav>
 
-				<div className="flex hidden items-center gap-2 md:block">
+				<div className="hidden items-center gap-2 md:flex">
 					<Button variant="outline">
 						<PhoneCallIcon /> +971 56 789 0123
 					</Button>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import { HomePageView } from "@/features/home/home-page-view";
 
@@ -28,7 +29,7 @@ const homeJsonLd = {
 export default function HomePage() {
 	return (
 		<>
-			<script type="application/ld+json">{JSON.stringify(homeJsonLd)}</script>
+			<Script type="application/ld+json">{JSON.stringify(homeJsonLd)}</Script>
 			<HomePageView />
 		</>
 	);
