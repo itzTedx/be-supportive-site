@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
 	ArrowRightIcon,
 	CircleDashedIcon,
@@ -10,20 +8,22 @@ import { Button } from "@/components/ui/button";
 import { Slope } from "@/assets/slope";
 
 import { HeroLines } from "../components/lottie";
+import { ParallaxImage } from "../components/parallax-hero-image";
 
 export const HeroSection = () => {
 	return (
 		<section className="relative flex max-h-svh items-end overflow-hidden pt-[55vh]">
 			<div className="absolute inset-x-0 top-0 size-full h-1/2 overflow-hidden bg-brand md:inset-0 md:h-full">
 				<div className="absolute inset-x-0 z-10 h-1/4 bg-linear-to-b from-gold-800/60" />
-				<Image
+				<ParallaxImage />
+				{/* <Image
 					alt="Background image"
 					className="object-cover object-bottom opacity-80"
 					fill
 					loading="eager"
 					priority
 					src="/images/hero-banner.webp"
-				/>
+				/> */}
 				<HeroLines />
 			</div>
 			<div className="relative flex h-[55svh] w-full bg-background md:h-[43svh] md:max-h-[440px]">
