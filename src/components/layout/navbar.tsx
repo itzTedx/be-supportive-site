@@ -19,19 +19,37 @@ import {
 import { Logo } from "@/assets/logo";
 
 import { NAV_ITEMS } from "@/config/navigation";
+import { useScroll } from "@/hook/use-scroll";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
-	return (
-		<header className="fixed top-0 z-40 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/5">
-			<div className="mx-auto flex h-18 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-				<Link href="/">
-					<Logo />
-				</Link>
+	const scrolled = useScroll(10);
 
-				<nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+	return (
+		// <header className="fixed top-0 z-40 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/5">
+		<header
+			className={cn(
+				"fixed inset-x-0 top-3 z-999 mx-12 md:rounded-sm md:transition-all md:ease-out",
+				{ "bg-card": scrolled }
+			)}
+		>
+			<div
+				className={cn(
+					"mx-auto flex h-16 w-full items-center justify-between md:transition-all md:ease-out",
+					{ "px-3": scrolled }
+				)}
+			>
+				<nav aria-label="Primary" className="hidden items-center gap-3 md:flex">
+					<Link className="mr-6 block px-2" href="/">
+						<Logo className={cn(scrolled ? "text-[#231F20]" : "text-card")} />
+					</Link>
+
 					{NAV_ITEMS.map((item) => (
 						<Button
-							className="px-3"
+							className={cn(
+								"h-8 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary",
+								{ "text-card": !scrolled }
+							)}
 							key={item.href}
 							nativeButton={false}
 							render={<Link href={item.href} />}

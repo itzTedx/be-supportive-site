@@ -1,16 +1,18 @@
+import { CircleDashedIcon } from "@phosphor-icons/react/dist/ssr";
+
 import { SectionBreak } from "@/components/layout/section-break";
 
 export const Services = () => {
 	return (
-		<section className="relative bg-primary">
+		<section className="relative bg-foreground text-background">
 			<SectionBreak />
-			<div className="p-12">
-				<h2 className="inline-flex items-center gap-2 text-brand-secondary">
-					<div className="size-2.5 rounded-full bg-brand-secondary" />
+			<div className="px-16 py-12">
+				<h2 className="inline-flex items-center gap-2 text-gold-600">
+					<CircleDashedIcon className="animate-spin text-primary" />
 					What we provide.
 				</h2>
 
-				<p className="font-display text-4xl text-primary-foreground">
+				<p className="mt-2 max-w-5xl font-display text-5xl text-background leading-snug">
 					We provide a full suite of services to help you start and operate your
 					business smoothly in the UAE
 				</p>
@@ -18,14 +20,14 @@ export const Services = () => {
 			<ul>
 				{SERVICES.map((service, i) => (
 					<li
-						className="flex items-center justify-between gap-4 border-border/10 border-t p-12"
+						className="flex items-center justify-between gap-4 border-border/10 border-t px-16 py-12"
 						key={service}
 					>
-						<span className="font-medium text-3xl text-brand-secondary">
+						<span className="font-medium text-3xl text-primary">
 							{Number(i + 1)}
 						</span>
 
-						<h3 className="font-display text-4xl text-primary-foreground">
+						<h3 className="font-display text-4xl text-brand-foreground">
 							{service}
 						</h3>
 					</li>
