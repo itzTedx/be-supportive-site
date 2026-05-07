@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 function AccordionRoot({ className, ...props }: Accordion.Root.Props) {
 	return (
 		<Accordion.Root
-			className={cn("flex w-lg max-w-[calc(100vw-8rem)] flex-col", className)}
+			className={cn("flex w-lg max-w-[calc(100vw-3rem)] flex-col", className)}
 			data-slot="accordion-root"
 			{...props}
 		/>
@@ -18,7 +18,7 @@ function AccordionItem({ className, ...props }: Accordion.Item.Props) {
 	return (
 		<Accordion.Item
 			className={cn(
-				"overflow-hidden border-border border-b-[0.5px] bg-secondary p-4",
+				"overflow-hidden border-border border-b-[0.5px] bg-secondary p-3 md:p-4",
 				"transition-[margin,border-radius,border-color] duration-200 ease-in-out-quad",
 				// Default state - first item has top rounded, last item has bottom rounded
 				"first:rounded-t-3xl",
@@ -61,8 +61,8 @@ function AccordionTrigger({
 	return (
 		<Accordion.Trigger
 			className={cn(
-				"group flex w-full cursor-pointer items-center gap-4 border-none bg-transparent text-left",
-				"font-[350] text-base text-secondary-foreground tracking-tight",
+				"group flex w-full cursor-pointer items-center gap-3 border-none bg-transparent text-left md:gap-4",
+				"font-medium text-base text-secondary-foreground tracking-wide",
 				className
 			)}
 			data-slot="accordion-trigger"
@@ -70,7 +70,7 @@ function AccordionTrigger({
 		>
 			<div
 				className={cn(
-					"flex h-8 w-8 items-center justify-center text-muted-foreground",
+					"flex size-3 items-center justify-center text-muted-foreground md:size-8",
 					"transition-[color,rotate] duration-[200ms,150ms] ease-[ease,var(--ease-in-out-quad)]",
 					"rotate-0",
 					"in-data-panel-open:rotate-90",
@@ -104,7 +104,7 @@ function AccordionTrigger({
 					/>
 				</svg>
 			</div>
-			<div>{children}</div>
+			{children}
 		</Accordion.Trigger>
 	);
 }
@@ -126,7 +126,7 @@ function AccordionPanel({
 			{...props}
 		>
 			<div className="w-full overflow-hidden">
-				<div className="ml-12 pr-12 text-foreground/75 text-sm leading-[1.6] max-sm:ml-10 max-sm:pr-0 max-sm:text-[0.9375rem] max-sm:leading-normal">
+				<div className="pr-9 text-foreground/75 text-sm leading-[1.6] max-sm:ml-6 max-sm:pr-0 max-sm:text-[0.9375rem] max-sm:leading-normal md:ml-12 md:pr-12">
 					{children}
 				</div>
 			</div>

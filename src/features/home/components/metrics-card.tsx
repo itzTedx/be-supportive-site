@@ -6,7 +6,12 @@ import { cn } from "@/lib/utils";
 
 import { METRICS } from "../sections/metrics";
 
-const heights = ["h-[480px]", "h-[420px]", "h-[360px]", "h-[300px]"];
+const heights = [
+	"md:h-[480px] h-[300px]",
+	"md:h-[420px] h-[240px]",
+	"md:h-[360px] h-[200px]",
+	"md:h-[300px] h-[160px]",
+];
 const colors = ["bg-[#e78745]", "bg-[#bfe5cb]", "bg-primary", "bg-[#e6dfda]"];
 
 export const MetricCard = ({
@@ -58,8 +63,10 @@ export const MetricCard = ({
 					scaleY,
 				}}
 			/>
-			<p className="font-display text-5xl">{metric.value}</p>
-			<h3 className="text-primary text-xl">{metric.label}</h3>
+			<p className="font-display text-3xl sm:text-4xl md:text-5xl">
+				{metric.value}
+			</p>
+			<h3 className="text-brand text-lg md:text-xl">{metric.label}</h3>
 		</motion.li>
 	);
 };

@@ -69,14 +69,14 @@ const slides = [
 export const Industries = () => {
 	return (
 		<section className="relative bg-secondary">
-			<Slideshow className="grid grid-cols-2">
-				<div className="flex flex-col items-start space-y-2 p-6 px-12 md:space-y-4 md:px-16">
+			<Slideshow className="grid md:grid-cols-2">
+				<div className="flex flex-col items-start space-y-2 p-6 sm:px-12 md:space-y-4 md:px-16">
 					<div className="py-6">
 						<h2 className="inline-flex items-center gap-2 text-gold-600">
 							<CircleDashedIcon className="animate-spin text-primary" />
 							Industries we serve
 						</h2>
-						<p className="text-balance font-display text-brand md:text-4xl lg:text-5xl">
+						<p className="text-balance font-display text-3xl text-brand md:text-4xl lg:text-5xl">
 							Supporting Businesses Across Key Sectors
 						</p>
 					</div>
@@ -93,7 +93,7 @@ export const Industries = () => {
 						Contact us <ArrowRightIcon />
 					</Button>
 				</div>
-				<div className="relative flex items-center overflow-hidden bg-brand p-12 md:p-16">
+				<div className="relative hidden items-center overflow-hidden bg-brand p-12 md:flex md:p-16">
 					<SlideshowImageContainer className="relative z-10 aspect-4/3 w-full">
 						{slides.map((slide, index) => (
 							<SlideshowImageWrap

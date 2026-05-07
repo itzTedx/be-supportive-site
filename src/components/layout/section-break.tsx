@@ -8,7 +8,7 @@ export const SectionBreak = ({ className }: SectionBreakProps) => {
 	return (
 		<div
 			className={cn(
-				"absolute top-[-25px] right-12 left-auto z-20 flex h-[50px] w-[40%] max-w-xl",
+				"absolute inset-x-0 top-[-25px] z-20 flex h-[50px] sm:right-12 sm:left-auto sm:w-[40%] sm:max-w-xl",
 				className
 			)}
 		>

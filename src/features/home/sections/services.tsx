@@ -6,13 +6,13 @@ export const Services = () => {
 	return (
 		<section className="relative bg-foreground text-background">
 			<SectionBreak />
-			<div className="px-16 py-12">
+			<div className="px-6 py-12 sm:px-9 md:px-16">
 				<h2 className="inline-flex items-center gap-2 text-gold-600">
 					<CircleDashedIcon className="animate-spin text-primary" />
 					What we provide.
 				</h2>
 
-				<p className="mt-2 max-w-5xl font-display text-5xl text-background leading-snug">
+				<p className="mt-2 max-w-5xl font-display text-2xl text-background leading-snug md:text-5xl">
 					We provide a full suite of services to help you start and operate your
 					business smoothly in the UAE
 				</p>
@@ -20,14 +20,14 @@ export const Services = () => {
 			<ul>
 				{SERVICES.map((service, i) => (
 					<li
-						className="flex items-center justify-between gap-4 border-border/10 border-t px-16 py-12"
+						className="flex flex-col gap-4 border-border/10 border-t p-6 sm:flex-row sm:items-center sm:justify-between sm:p-9 md:px-16 md:py-12"
 						key={service}
 					>
-						<span className="font-medium text-3xl text-primary">
+						<span className="font-medium text-2xl text-primary md:text-3xl">
 							{Number(i + 1)}
 						</span>
 
-						<h3 className="font-display text-4xl text-brand-foreground">
+						<h3 className="font-display text-2xl text-brand-foreground md:text-4xl">
 							{service}
 						</h3>
 					</li>

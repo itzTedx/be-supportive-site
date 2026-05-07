@@ -50,26 +50,26 @@ export const STEPS = [
 
 export const HowItWorks = () => {
 	return (
-		<section className="grid grid-cols-2 bg-card">
+		<section className="grid bg-card md:grid-cols-2">
 			<div className="relative overflow-hidden bg-brand-secondary">
-				<div className="relative z-10 flex h-full flex-col justify-between p-12 md:p-16 lg:p-20">
+				<div className="relative z-10 flex h-full flex-col justify-between p-6 max-sm:pb-12 sm:p-12 md:p-16 lg:p-20">
 					<h2 className="mt-4 text-balance font-display text-3xl text-brand-foreground">
 						Start Your UAE Company in 4 Simple Steps
 					</h2>
 
-					<ul className="grid grid-cols-2 gap-3">
+					<ul className="mt-6 grid gap-3 sm:mt-0 md:grid-cols-2">
 						{STEPS.map((step) => (
 							<li
 								className="relative rounded-sm bg-background p-6"
 								key={step.title}
 							>
-								<span className="absolute top-2 right-2 font-display font-semibold text-6xl text-brand-foreground">
+								<span className="absolute top-2 right-2 font-display font-semibold text-6xl text-primary/30">
 									{step.id}
 								</span>
 								<h3 className="font-medium text-3xl text-gold-800">
 									{step.title}
 								</h3>
-								<p className="mt-3 text-balance text-brand text-xl">
+								<p className="mt-2 text-balance text-brand text-lg md:mt-3 md:text-xl">
 									{step.description}
 								</p>
 							</li>
@@ -79,7 +79,7 @@ export const HowItWorks = () => {
 				<IndustriesLines className="absolute top-0 opacity-20" />
 			</div>
 
-			<div className="relative p-12 md:p-16 lg:p-20">
+			<div className="relative p-6 max-sm:pt-16 sm:p-12 md:p-16 lg:p-20">
 				<SectionBreak className="inset-x-0 z-10 w-full max-w-none" />
 				<span className="inline-flex items-center gap-2 text-gold-600">
 					<CircleDashedIcon className="animate-spin text-primary" />
@@ -95,20 +95,20 @@ export const HowItWorks = () => {
 					you're compliant, efficient, and ready to operate.
 				</p>
 
-				<ul className="my-14 space-y-6">
+				<ul className="my-9 space-y-6 md:my-14">
 					{WORKS.map((work) => (
 						<li className="flex items-center gap-4" key={work.title}>
-							<span className="grid size-12 place-content-center rounded-full bg-brand-foreground">
+							<span className="grid size-9 place-content-center rounded-full bg-brand-foreground md:size-12">
 								<CheckCircleIcon
-									className="size-6 text-gold-600"
+									className="size-4 text-gold-600 md:size-6"
 									weight="fill"
 								/>
 							</span>
 							<div>
-								<h3 className="font-medium text-2xl text-gold-800">
+								<h3 className="font-medium text-gold-800 text-xl md:text-2xl">
 									{work.title}
 								</h3>
-								<p className="text-brand text-lg tracking-wide">
+								<p className="text-brand text-sm sm:text-base sm:tracking-wide md:text-lg">
 									{work.description}
 								</p>
 							</div>

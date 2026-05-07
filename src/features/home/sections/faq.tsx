@@ -90,25 +90,25 @@ const FAQS = [
 
 export const Faq = () => {
 	return (
-		<section className="relative flex justify-between bg-brand p-12 md:p-16">
-			<div className="sticky top-[25vh] z-10 h-fit max-w-3xl">
-				<div className="py-6">
+		<section className="relative flex flex-col bg-brand p-6 pb-24 sm:p-12 md:flex-row md:justify-between md:p-16">
+			<div className="z-10 mb-6 h-fit max-w-3xl md:sticky md:top-[25vh] md:mb-0">
+				<div>
 					<h2 className="inline-flex items-center gap-2 text-gold-200">
 						<CircleDashedIcon className="animate-spin text-gold-300" />
 						Clear Answers. Trusted Guidance.
 					</h2>
-					<p className="mt-2 text-balance font-display text-card md:text-4xl lg:text-5xl">
+					<p className="mt-2 text-balance font-display text-2xl text-card md:text-4xl lg:text-5xl">
 						Frequently Asked Questions About Business Setup in the UAE
 					</p>
 
-					<p className="mt-4 text-balance text-brand-foreground text-lg">
+					<p className="mt-4 text-balance text-brand-foreground md:text-lg">
 						Get clear, expert answers to the most common questions about
 						starting a business in Abu Dhabi and across the UAE. From costs and
 						timelines to visas and legal requirements, we help you make informed
 						decisions with confidence.
 					</p>
 				</div>
-				<div className="mt-4 max-w-md rounded-md border border-gold-300/20 bg-card p-6">
+				<div className="mt-6 max-w-md rounded-md border border-gold-300/20 bg-card p-6">
 					<h3 className="text-balance font-display text-2xl text-brand">
 						Still have questions about setting up your business in the UAE?
 					</h3>

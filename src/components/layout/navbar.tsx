@@ -28,40 +28,48 @@ export function Navbar() {
 	return (
 		<header
 			className={cn(
-				"fixed inset-x-0 top-3 z-999 mx-12 md:rounded-sm md:transition-all md:ease-out",
+				"fixed inset-x-0 top-3 z-999 mx-4 rounded-sm transition-all ease-out md:mx-12",
 				{ "bg-card": scrolled }
 			)}
 		>
 			<div
 				className={cn(
-					"mx-auto flex h-16 w-full items-center justify-between md:transition-all md:ease-out",
+					"mx-auto flex h-14 w-full items-center justify-between transition-all ease-out md:h-16",
 					{ "px-3": scrolled }
 				)}
 			>
-				<nav aria-label="Primary" className="hidden items-center gap-3 md:flex">
-					<Link className="mr-6 block px-2" href="/">
-						<Logo className={cn(scrolled ? "text-[#231F20]" : "text-card")} />
-					</Link>
-
-					{NAV_ITEMS.map((item) => (
-						<Button
+				<nav aria-label="Primary" className="flex items-center gap-3">
+					<Link className="block md:mr-6 md:px-2" href="/">
+						<Logo
 							className={cn(
-								"h-8 border-brand/20 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary hover:text-primary",
-								{ "text-card": !scrolled }
+								scrolled ? "h-10 w-auto text-[#231F20] sm:h-12" : "text-card"
 							)}
-							key={item.href}
-							nativeButton={false}
-							render={<Link href={item.href} />}
-							variant="ghost"
-						>
-							{item.label}
-						</Button>
-					))}
+						/>
+					</Link>
+					<div className="hidden items-center gap-3 md:flex">
+						{NAV_ITEMS.map((item) => (
+							<Button
+								className={cn(
+									"h-8 border-brand/20 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary hover:text-primary",
+									{ "text-card": !scrolled }
+								)}
+								key={item.href}
+								nativeButton={false}
+								render={<Link href={item.href} />}
+								variant="ghost"
+							>
+								{item.label}
+							</Button>
+						))}
+					</div>
 				</nav>
 
-				<div className="hidden items-center gap-2 md:flex">
+				<div className="flex items-center gap-2">
 					<Button
-						className={cn(!scrolled ? "text-card" : "text-brand")}
+						className={cn(
+							"hidden md:inline-flex",
+							!scrolled ? "text-card" : "text-brand"
+						)}
 						variant="outline"
 					>
 						<PhoneCallIcon /> +971 56 789 0123
@@ -69,53 +77,60 @@ export function Navbar() {
 					<Button nativeButton={false} render={<Link href="/contact" />}>
 						Get Consultation
 					</Button>
-				</div>
-
-				<div className="md:hidden">
-					<Drawer position="left">
-						<DrawerTrigger render={<Button variant="outline" />}>
-							<ListIcon />
-						</DrawerTrigger>
-						<DrawerPopup showCloseButton variant="inset">
-							<DrawerHeader>
-								<DrawerTitle>Navigation</DrawerTitle>
-							</DrawerHeader>
-							<DrawerPanel>
-								<nav className="-mx-[calc(--spacing(3)-1px)] flex flex-col gap-0.5">
-									{NAV_ITEMS.map((item) => (
-										<DrawerClose
-											key={item.href}
-											nativeButton={false}
-											render={
-												<Button
-													className="justify-start"
-													nativeButton={false}
-													render={<Link href={item.href} />}
-													variant="ghost"
-												/>
-											}
-										>
-											{item.label}
-										</DrawerClose>
-									))}
-								</nav>
-							</DrawerPanel>
-							<DrawerFooter variant="default">
-								<DrawerClose
-									nativeButton={false}
-									render={
-										<Button
-											className="w-full justify-center"
-											nativeButton={false}
-											render={<Link href="/contact" />}
-										/>
-									}
-								>
-									Get Consultation
-								</DrawerClose>
-							</DrawerFooter>
-						</DrawerPopup>
-					</Drawer>
+					<div className="md:hidden">
+						<Drawer position="left">
+							<DrawerTrigger
+								render={
+									<Button
+										className={cn(!scrolled && "text-background")}
+										size="icon"
+										variant="outline"
+									/>
+								}
+							>
+								<ListIcon />
+							</DrawerTrigger>
+							<DrawerPopup showCloseButton variant="inset">
+								<DrawerHeader>
+									<DrawerTitle>Navigation</DrawerTitle>
+								</DrawerHeader>
+								<DrawerPanel>
+									<nav className="-mx-[calc(--spacing(3)-1px)] flex flex-col gap-0.5">
+										{NAV_ITEMS.map((item) => (
+											<DrawerClose
+												key={item.href}
+												nativeButton={false}
+												render={
+													<Button
+														className="justify-start"
+														nativeButton={false}
+														render={<Link href={item.href} />}
+														variant="ghost"
+													/>
+												}
+											>
+												{item.label}
+											</DrawerClose>
+										))}
+									</nav>
+								</DrawerPanel>
+								<DrawerFooter variant="default">
+									<DrawerClose
+										nativeButton={false}
+										render={
+											<Button
+												className="w-full justify-center"
+												nativeButton={false}
+												render={<Link href="/contact" />}
+											/>
+										}
+									>
+										Get Consultation
+									</DrawerClose>
+								</DrawerFooter>
+							</DrawerPopup>
+						</Drawer>
+					</div>
 				</div>
 			</div>
 		</header>

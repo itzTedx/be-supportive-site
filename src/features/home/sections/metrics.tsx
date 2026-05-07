@@ -27,16 +27,18 @@ export const METRICS = [
 
 export const Metrics = () => {
 	return (
-		<section className="p-16">
-			<div className="flex justify-between gap-12 text-brand">
-				<h2 className="font-display text-7xl">Outsized Value.</h2>
-				<p className="max-w-lg text-2xl">
+		<section className="px-6 py-12 md:p-16">
+			<div className="flex flex-col gap-6 text-brand md:flex-row md:justify-between md:gap-12">
+				<h2 className="font-display text-5xl sm:text-6xl md:text-7xl">
+					Outsized Value.
+				</h2>
+				<p className="max-w-lg text-xl md:text-2xl">
 					We help entrepreneurs, startups, and global investors establish and
 					grow their presence in the UAE with confidence, speed, and full
 					compliance.
 				</p>
 			</div>
-			<ul className="mt-16 grid grid-cols-4 items-end gap-6 text-brand">
+			<ul className="mt-16 grid items-end gap-6 text-brand md:grid-cols-4">
 				{METRICS.map((metric, i) => (
 					<MetricCard index={i} key={metric.id} metric={metric} />
 				))}
