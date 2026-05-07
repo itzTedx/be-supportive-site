@@ -93,7 +93,7 @@ export const HowItWorks = () => {
 					you're compliant, efficient, and ready to operate.
 				</p>
 
-				<ul className="my-12 space-y-6">
+				<ul className="my-14 space-y-6">
 					{WORKS.map((work) => (
 						<li className="flex items-center gap-4" key={work.title}>
 							<span className="grid size-12 place-content-center rounded-full bg-brand-foreground">

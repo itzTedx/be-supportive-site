@@ -75,6 +75,12 @@
 	--color-gold-800: oklch(0.474 0.0652 60.1);
 	--color-gold-900: oklch(0.4152 0.0532 61.16);
 	--color-gold-950: oklch(0.2733 0.0343 58.11);
+
+	/* Easing */
+	--ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+	--ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+	--ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 :root {
@@ -88,7 +94,7 @@
 	--secondary-foreground: oklch(0.3177 0.0663 77.3);
 
 	--muted: oklch(0.96 0.002 17.2);
-	--muted-foreground: oklch(56.235% 0.0218 80.013);
+	--muted-foreground: oklch(57% 0.03605 80.802);
 
 	--accent: oklch(0.96 0.002 17.2);
 	--accent-foreground: oklch(0.214 0.009 43.1);

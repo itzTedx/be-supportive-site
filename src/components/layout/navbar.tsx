@@ -46,7 +46,7 @@ export function Navbar() {
 					{NAV_ITEMS.map((item) => (
 						<Button
 							className={cn(
-								"h-8 border-brand/20 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary",
+								"h-8 border-brand/20 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary hover:text-primary",
 								{ "text-card": !scrolled }
 							)}
 							key={item.href}
@@ -60,7 +60,10 @@ export function Navbar() {
 				</nav>
 
 				<div className="hidden items-center gap-2 md:flex">
-					<Button variant="outline">
+					<Button
+						className={cn(!scrolled ? "text-card" : "text-brand")}
+						variant="outline"
+					>
 						<PhoneCallIcon /> +971 56 789 0123
 					</Button>
 					<Button nativeButton={false} render={<Link href="/contact" />}>
