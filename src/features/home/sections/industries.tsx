@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { CircleDashedIcon } from "@phosphor-icons/react/dist/ssr";
 
-import { SectionBreak } from "@/components/layout/section-break";
 import { Button } from "@/components/ui/button";
 
 import { ArrowRightIcon } from "@/assets/icons/arrow";
@@ -70,7 +69,6 @@ const slides = [
 export const Industries = () => {
 	return (
 		<section className="relative bg-secondary">
-			<SectionBreak className="inset-x-0 top-auto bottom-[-25px] w-full max-w-none" />
 			<Slideshow className="grid grid-cols-2">
 				<div className="flex flex-col items-start space-y-2 p-6 px-12 md:space-y-4 md:px-16">
 					<div className="py-6">

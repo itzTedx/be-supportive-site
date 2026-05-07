@@ -3,6 +3,7 @@ import {
 	CircleDashedIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
+import { SectionBreak } from "@/components/layout/section-break";
 import { Button } from "@/components/ui/button";
 
 import { ArrowRightIcon } from "@/assets/icons/arrow";
@@ -78,7 +79,8 @@ export const HowItWorks = () => {
 				<IndustriesLines className="absolute top-0 opacity-20" />
 			</div>
 
-			<div className="p-12 md:p-16 lg:p-20">
+			<div className="relative p-12 md:p-16 lg:p-20">
+				<SectionBreak className="inset-x-0 z-10 w-full max-w-none" />
 				<span className="inline-flex items-center gap-2 text-gold-600">
 					<CircleDashedIcon className="animate-spin text-primary" />
 					How it works
