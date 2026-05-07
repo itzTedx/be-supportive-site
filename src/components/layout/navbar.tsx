@@ -26,7 +26,6 @@ export function Navbar() {
 	const scrolled = useScroll(10);
 
 	return (
-		// <header className="fixed top-0 z-40 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/5">
 		<header
 			className={cn(
 				"fixed inset-x-0 top-3 z-999 mx-12 md:rounded-sm md:transition-all md:ease-out",
@@ -47,7 +46,7 @@ export function Navbar() {
 					{NAV_ITEMS.map((item) => (
 						<Button
 							className={cn(
-								"h-8 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary",
+								"h-8 border-brand/20 bg-muted-foreground/12 px-3 font-normal text-primary-foreground tracking-wider backdrop-blur-lg hover:bg-brand-secondary",
 								{ "text-card": !scrolled }
 							)}
 							key={item.href}

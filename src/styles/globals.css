@@ -19,7 +19,6 @@
 
 	/* Primary */
 	--color-primary: var(--primary);
-	--color-primary-800: var(--primary-800);
 	--color-primary-foreground: var(--primary-foreground);
 
 	/* Secondary */
@@ -85,7 +84,7 @@
 	--primary: var(--color-gold-400);
 	--primary-foreground: var(--color-gold-900);
 
-	--secondary: oklch(0.9764 0.0184 77.3);
+	--secondary: oklch(0.9433 0.0131 71.33);
 	--secondary-foreground: oklch(0.3177 0.0663 77.3);
 
 	--muted: oklch(0.96 0.002 17.2);

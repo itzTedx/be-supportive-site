@@ -9,13 +9,13 @@ import { Button } from "@/components/ui/button";
 
 import { Slope } from "@/assets/slope";
 
-import HeroAnimation from "../components/hero-lottie";
+import { HeroLines } from "../components/lottie";
 
 export const HeroSection = () => {
 	return (
 		<section className="relative flex max-h-svh items-end overflow-hidden pt-[55vh]">
 			<div className="absolute inset-0 size-full overflow-hidden bg-brand">
-				<div className="absolute inset-x-0 z-10 h-1/4 bg-linear-to-b from-primary/60" />
+				<div className="absolute inset-x-0 z-10 h-1/4 bg-linear-to-b from-gold-800/60" />
 				<Image
 					alt="Background image"
 					className="object-cover object-bottom opacity-80"
@@ -24,7 +24,7 @@ export const HeroSection = () => {
 					priority
 					src="/images/hero-banner.webp"
 				/>
-				<HeroAnimation />
+				<HeroLines />
 			</div>
 			<div className="relative flex h-[43svh] max-h-[440px] w-full bg-background">
 				<div className="absolute -top-12 z-40 flex h-12 bg-background">
