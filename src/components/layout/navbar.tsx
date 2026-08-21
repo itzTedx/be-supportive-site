@@ -74,7 +74,7 @@ export function Navbar() {
 					>
 						<PhoneCallIcon /> +971 56 789 0123
 					</Button>
-					<Button nativeButton={false} render={<Link href="/contact" />}>
+					<Button nativeButton={false} render={<Link href="/get-consultation" />}>
 						Get Consultation
 					</Button>
 					<div className="md:hidden">
@@ -121,7 +121,7 @@ export function Navbar() {
 											<Button
 												className="w-full justify-center"
 												nativeButton={false}
-												render={<Link href="/contact" />}
+												render={<Link href="/get-consultation" />}
 											/>
 										}
 									>
